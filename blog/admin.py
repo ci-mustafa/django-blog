@@ -5,4 +5,4 @@ from .models import Post
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    fields = ["title", "slug", "content", "status", "author"]
+    fields = ["title", "slug", "content", "excerpt", "status", "author"]
