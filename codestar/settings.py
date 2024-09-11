@@ -26,6 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.8000-cimustafa-djangoblog-1gyz8uxyede.ws-eu116.gitpod.io",
+    "https://*.herokuapp.com"
+]
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
