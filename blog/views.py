@@ -7,9 +7,10 @@ class PostList(generic.ListView):
     # queryset to fetch all posts
     queryset = models.Post.objects.all()
     # template name 
-    template_name = "post_list.html"
+    template_name = "blog/index.html"
     # declare a custom context object name
     context_object_name = "posts"
+    paginate_by = 6
     
 
 
