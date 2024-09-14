@@ -5,10 +5,11 @@ from .models import Post, Comment
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    fields = ["title", "slug", "content", "excerpt", "status", "author"]
-
+    list_display = ["title", "slug", "content", "excerpt", "status", "author"]
+    
+    
 
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    fields = ["post", "author", "body", "approved"]
+    list_display = ["post", "author", "body", "approved"]

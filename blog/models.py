@@ -18,6 +18,12 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
 
+    class Meta:
+        ordering = ["-created_on"]
+    
+    def __str__(self):
+        return f"Post title: {self.title} | Writen by: {self.author}"
+
 
 #comment model
 class Comment(models.Model):
@@ -26,5 +32,11 @@ class Comment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["created_on"]
+    
+    def __str__(self):
+        return f"Comment: {self.body} | By: {self.author}"
 
 
