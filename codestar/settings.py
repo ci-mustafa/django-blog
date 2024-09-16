@@ -28,7 +28,6 @@ TAMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 CSRF_TRUSTED_ORIGINS = [
-    # "https://*.8000-cimustafa-djangoblog-1gyz8uxyede.ws-eu116.gitpod.io",
     "https://*.8000-cimustafa-djangoblog-jgd4gltstig.ws.codeinstitute-ide.net",
     "https://*.herokuapp.com"
 ]
@@ -37,7 +36,6 @@ CSRF_TRUSTED_ORIGINS = [
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    #"8000-cimustafa-djangoblog-1gyz8uxyede.ws-eu116.gitpod.io",
     "8000-cimustafa-djangoblog-jgd4gltstig.ws.codeinstitute-ide.net",
     ".herokuapp.com",
 ]
