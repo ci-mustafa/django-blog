@@ -34,7 +34,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     #"8000-cimustafa-djangoblog-1gyz8uxyede.ws-eu116.gitpod.io",
