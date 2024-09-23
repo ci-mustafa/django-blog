@@ -27,11 +27,12 @@ def post_detail(request, slug):
     :template:`blog/post_detail.html`
     """
     post = get_object_or_404(models.Post, slug=slug)
-
+    comments = post.comments.all().order_by("-created_on")
+    comment_count = post.comments.filter(approved=True).count()
     return render(
         request,
         "blog/post_detail.html",
-        {"post": post, "coder": "mustafa"},
+        {"post": post, "comments": comments, "comment_count": comment_count},
     )
     
 
