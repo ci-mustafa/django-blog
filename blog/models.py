@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
+
 
 # post model
 class Post(models.Model):
@@ -17,6 +19,7 @@ class Post(models.Model):
     excerpt = models.TextField(null=True, blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    featured_image = CloudinaryField('image', default='placeholder')
 
     class Meta:
         ordering = ["-created_on"]
