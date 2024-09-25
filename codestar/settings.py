@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 from django.contrib.messages import constants as messages
 import os
+import sys
 import dj_database_url
 if os.path.isfile("env.py"):
     import env
@@ -113,6 +114,8 @@ DATABASES = {
         # 'NAME': BASE_DIR / 'db.sqlite3',
 }
 
+if "test" in sys.argv:
+    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
